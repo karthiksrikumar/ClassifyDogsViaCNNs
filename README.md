@@ -47,20 +47,24 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-Skills Learned
-Data Preprocessing: Learned to standardize and prepare data for training machine learning models.
-K-Neighbors Classifier: Gained experience in training and evaluating a simple K-neighbors classifier for image classification tasks.
-Neural Networks: Learned to implement and train multi-layer perceptrons (MLPs) for classification.
-Convolutional Neural Networks (CNNs): Developed skills in building, training, and evaluating CNNs for more complex image classification problems.
-Model Evaluation: Learned to use accuracy scores and visualizations to evaluate and compare model performance.
-Explainable AI: Implemented saliency maps to make the AI model's decisions interpretable and explainable.
-Applications
+## Skills Learned
+
+- **Data Preprocessing**: Learned to standardize and prepare data for training machine learning models.
+- **K-Neighbors Classifier**: Gained experience in training and evaluating a simple K-neighbors classifier for image classification tasks.
+- **Neural Networks**: Learned to implement and train multi-layer perceptrons (MLPs) for classification.
+- **Convolutional Neural Networks (CNNs)**: Developed skills in building, training, and evaluating CNNs for more complex image classification problems.
+- **Model Evaluation**: Learned to use accuracy scores and visualizations to evaluate and compare model performance.
+- **Explainable AI**: Implemented saliency maps to make the AI model's decisions interpretable and explainable.
+
+## Applications
+
 The skills and techniques learned in this project can be applied to various fields, including:
 
-Computer Vision: Developing models for image recognition, object detection, and image segmentation.
-Medical Imaging: Applying CNNs to analyze and classify medical images for diagnostics.
-Autonomous Vehicles: Using image classification to identify objects and make driving decisions.
-Retail: Implementing image recognition for product identification and inventory management.
-Security: Developing surveillance systems that can detect and classify objects in real-time.
-This project provides a foundation for further exploration and application of machine learning and deep learning in various domains.
+- **Computer Vision**: Developing models for image recognition, object detection, and image segmentation.
+- **Medical Imaging**: Applying CNNs to analyze and classify medical images for diagnostics.
+- **Autonomous Vehicles**: Using image classification to identify objects and make driving decisions.
+- **Retail**: Implementing image recognition for product identification and inventory management.
+- **Security**: Developing surveillance systems that can detect and classify objects in real-time.
+
+
 
