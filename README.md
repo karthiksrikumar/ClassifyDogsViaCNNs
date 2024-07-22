@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates the application of machine learning and deep learning techniques to classify images of dogs and roads. It involves training a simple K-neighbors classifier and neural networks, including convolutional neural networks (CNNs). Additionally, it showcases the use of a saliency map for explainable AI.
+This project demonstrates the application of machine learning and deep learning techniques to classify images of dogs and roads. It involves training a  K-neighbors classifier and neural networks, including convolutional neural networks (CNNs). Additionally, it showcases the use of a saliency map for explainable AI.
 
 ## Table of Contents
 
@@ -65,6 +65,76 @@ The skills and techniques learned in this project can be applied to various fiel
 - **Autonomous Vehicles**: Using image classification to identify objects and make driving decisions.
 - **Retail**: Implementing image recognition for product identification and inventory management.
 - **Security**: Developing surveillance systems that can detect and classify objects in real-time.
+
+# CNN Classifier for Dog vs. Road Image Classification
+
+## Import Statements
+This section imports necessary libraries for machine learning, data manipulation, and visualization, including scikit-learn, TensorFlow/Keras, NumPy, Pandas, Seaborn, and Matplotlib.
+
+## Utility Functions
+
+### Categorical to One-Hot Encoding
+`categorical_to_onehot(labels_in)`:
+- Converts categorical labels ('dog' or 'road') to one-hot encoded vectors.
+- 'dog' becomes [1, 0], 'road' becomes [0, 1].
+
+### One-Hot Encoding
+`one_hot_encoding(input)`:
+- Performs one-hot encoding on numerical input.
+- Creates a binary matrix representation of categorical data.
+
+### Load Data
+`load_data()`:
+- Downloads CIFAR data from a cloud link.
+- Loads the data into a dictionary containing 'data' and 'labels'.
+
+### Plot One Image
+`plot_one_image(data, labels, img_idx)`:
+- Displays a single image from the dataset.
+- Shows the image label and sets up the plot with proper axis labels.
+
+### Logits to One-Hot Encoding
+`logits_to_one_hot_encoding(input)`:
+- Converts model output logits to one-hot encoded vectors.
+- Used for transforming raw model predictions into classification results.
+
+## CNN Classifier
+`class CNNClassifier`:
+
+### Initialization
+- Sets up the model with customizable parameters:
+  - `num_epochs`: Number of training iterations (default 30)
+  - `layers`: Number of convolutional layers (default 4)
+  - `dropout`: Dropout rate for regularization (default 0.5)
+
+### Model Architecture
+`build_model()`:
+- Creates a Sequential model with the following structure:
+  1. Input reshaping to 32x32x3
+  2. Multiple convolutional layers with ReLU activation
+  3. Max pooling and dropout for regularization
+  4. Deeper convolutional layers with increased filters
+  5. Flattening and dense layers for classification
+  6. Final softmax layer for binary output
+
+### Training Method
+`fit(*args, **kwargs)`:
+- Trains the model on given data.
+- Uses specified number of epochs and a batch size of 10.
+
+### Prediction Methods
+- `predict(*args, **kwargs)`: Returns one-hot encoded predictions.
+- `predict_proba(*args, **kwargs)`: Returns probability predictions.
+
+### Scoring Method
+`score(X, y)`:
+- Calculates the accuracy of the model's predictions.
+
+## Visualization Function
+`plot_acc(history, ax = None, xlabel = 'Epoch #')`:
+- Plots training and validation accuracy over epochs.
+- Highlights the best epoch and shows a chance level line.
+- Uses Seaborn for enhanced visualizations.
 
 
 
